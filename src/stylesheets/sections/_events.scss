@@ -1,0 +1,80 @@
+.events {
+  padding: 4rem 0;
+
+  .calendar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem 0;
+
+    button {
+      background: none;
+      border: 2px solid #333;
+      padding: 0.5rem 1rem;
+      font-size: 1.25rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background: #333;
+        color: #fff;
+      }
+    }
+
+    h2 {
+      margin: 0;
+      font-weight: 700;
+    }
+  }
+
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.5rem;
+  }
+
+  .day-name {
+    text-align: center;
+    font-weight: 700;
+    padding: 0.5rem 0;
+  }
+
+  .calendar-day {
+    min-height: 100px;
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    position: relative;
+    background: #fff;
+
+    &.inactive {
+      background: #f7f7f7;
+      color: #aaa;
+    }
+
+    .date {
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    .event {
+      margin-top: 0.25rem;
+      padding: 0.25rem 0.4rem;
+      font-size: 0.75rem;
+      background: #0d6efd;
+      color: #fff;
+      border-radius: 4px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .calendar-day {
+      min-height: 70px;
+      font-size: 0.8rem;
+
+      .event {
+        font-size: 0.65rem;
+      }
+    }
+  }
+}
