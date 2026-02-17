@@ -17,7 +17,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
 .intro-section {
-  height: 400px;           /* desktop height */
   position: relative;
   overflow: hidden;
 
@@ -100,7 +99,7 @@ body {
     margin-bottom: 1rem;
     position: relative;
     overflow: hidden;
-    border-top: 0.5rem solid ($primary);
+    border-top: 0.5rem solid ($primary, 20%);
     border-radius: 12px;
 
     img {
