@@ -1,0 +1,32 @@
+.footer-section {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  .footer-logo {
+    max-height: 100px;
+    width: auto;
+  }
+
+  .footer-left {
+    a.nav-link {
+      padding: 0;
+      font-weight: 600;
+      font-size: larger;
+      color: #ffffff;
+    }
+
+    .footer-social {
+      img {
+        height: 28px;
+        width: auto;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+        opacity: 0.85;
+      }
+
+      a:hover img {
+        transform: scale(1.1);
+        opacity: 1;
+      }
+    }
+  }
+}
