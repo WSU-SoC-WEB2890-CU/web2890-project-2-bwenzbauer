@@ -1,29 +1,29 @@
+const path = require("path");
+const glob = require("glob");
 
-const path = require("path")
-const glob = require("glob")
+import { defineConfig } from "vite";
+import eslint from "@rollup/plugin-eslint";
 
-import { defineConfig } from "vite"
-import eslint from "@rollup/plugin-eslint"
-
-let input = {}
+let input = {};
 
 glob
   .sync("./src/**/*.html")
   .map((file) => {
-    return [file.substring(`.${path.sep}src${path.sep}`.length), file]
+    return [file.substring(`.${path.sep}src${path.sep}`.length), file];
   })
   .forEach((f) => {
-    input[f[0]] = f[1]
-  })
+    input[f[0]] = f[1];
+  });
 
 export default defineConfig({
   root: "src",
+  publicDir: "../public",
   build: {
     manifest: true,
     outDir: "../dist",
     emptyOutDir: true,
     rollupOptions: {
-      input
+      input,
     },
   },
   server: {
@@ -39,4 +39,4 @@ export default defineConfig({
       apply: "build",
     },
   ],
-})
+});

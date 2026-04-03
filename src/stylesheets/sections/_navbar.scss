@@ -1,0 +1,30 @@
+@use '../custom'as *;
+@use '../components/mixins'as *;
+
+.menu {
+  @include gradient;
+
+    .navbar-brand img {
+    max-height: 100px;
+    width: auto;
+  }
+
+  li {
+    padding: 0 0.7rem;
+
+    a {
+      color: $white;
+      padding: 0 0.5rem;
+      text-transform: capitalize;
+      font-weight: 600;
+      font-size: larger;
+
+    }
+
+    &:hover {
+      color: $white;
+    }
+
+  }
+
+}
